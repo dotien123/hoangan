@@ -633,7 +633,7 @@
                                         <div class="d-inline-block">
                                             <h3 class="w-100">TIỆC CƯỚI TỐI NHÀ GÁI</h3>
                                             <p class="w-100 mb-2 mt-2"><i class="fa fa-clock" aria-hidden="true"></i>
-                                                <strong>17:00 08/01/2025</strong></p>
+                                                <strong>9:30  09/1/2026</strong></p>
                                             <p class="w-100 mb-0 mt-1">
                                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                                                 <span> - </span>
@@ -685,7 +685,7 @@
                                         <div class="d-inline-block">
                                             <h3 class="w-100">TIỆC CƯỚI TỐI NHÀ NAM</h3>
                                             <p class="w-100 mb-2 mt-2"><i class="fa fa-clock" aria-hidden="true"></i>
-                                                <strong>17:30 08/01/2025</strong></p>
+                                                <strong>17:30 08/01/2026</strong></p>
                                             <p class="w-100 mb-0 mt-1">
                                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                                                 <span> - </span>
@@ -1012,7 +1012,7 @@
         }
 
         .music-control.playing {
-            animation: rotate 3s linear infinite;`
+            animation: rotate 3s linear infinite;
             background: #ff7675; /* Đổi màu khi đang phát */
             color: white;
         }
@@ -1036,6 +1036,26 @@
             display: none !important;
         }
     </style>
+    <script>
+        window.addEventListener('load', function () {
+            // Danh sách ảnh trong folder img của bạn
+            const myImages = [
+                'img/1.jpg',
+                'img/2.jpg',
+                'img/3.jpg',
+                'img/4.jpg'
+            ];
+
+            // Tìm tất cả các slide đang chứa ảnh background của biihappy
+            const slides = document.querySelectorAll('.zs-slide');
+            
+            slides.forEach((slide, index) => {
+                if (myImages[index]) {
+                    slide.style.backgroundImage = `url("${myImages[index]}")`;
+                }
+            });
+        });
+    </script>
     <script>
         const audio = document.getElementById('weddingAudio');
         const btn = document.getElementById('newMusicBtn');
